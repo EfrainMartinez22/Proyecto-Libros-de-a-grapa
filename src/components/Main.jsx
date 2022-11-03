@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card';
 
 function Main() {
   return (
@@ -16,9 +17,9 @@ function Main() {
               <img src='../libros 3.png' />
         </div>
     </div>
-       <   div className="container">
-
-          </div>
+       < div className="container">
+                 <Card/>
+         </div>
     </header>
 
   )
