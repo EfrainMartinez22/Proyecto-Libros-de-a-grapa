@@ -6,7 +6,7 @@ function Main() {
     const [bookData,setData]=useState([]);
     const searchBook=(evt)=>{
         if(evt.key==="Enter"){
-            // axios.get('url de api y apikey')
+           axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&key=AIzaSyBeNkzkdx6ojc8sFrqWnZtXZLlJiS9_1bc')
             .then(res=>setData(res.data.items))
             .then(err=>console.log(err))
 
