@@ -5,7 +5,10 @@ function Main() {
     const [search, setSearch]=useState("");
     const searchBook=(evt)=>{
         if(evt.key==="Enter"){
-            
+            // axios.get('url de api y apikey')
+            .then(res=>console.log(res.data.items))
+            .then(err=>console.log(err))
+
         }
     }
   return (
