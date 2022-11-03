@@ -3,6 +3,11 @@ import Card from './Card';
 import axios from 'axios'
 function Main() {
     const [search, setSearch]=useState("");
+    const searchBook=(evt)=>{
+        if(evt.key==="Enter"){
+            
+        }
+    }
   return (
     <header>
     <div className="header">
@@ -12,7 +17,7 @@ function Main() {
         <div className="row2">
              <h2>Busca tu libro</h2>
              <div className="search">
-                 <input type="text" placeholder='Ingresa el nombre del libro'/>
+                 <input type="text" value={search} onChange={(e)=>{setSearch(e.target.value)}} onKeyPress={searchBook}      placeholder='Ingresa el nombre del libro'/>
                  <button>Buscar</button>
              </div>
               <img src='../libros 3.png' />
