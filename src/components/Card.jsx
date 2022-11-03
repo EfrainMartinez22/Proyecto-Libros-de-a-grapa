@@ -1,4 +1,5 @@
 import React from 'react'
+import Modal from './Modal'
 
 function Card({book}) {
   return (
@@ -17,6 +18,7 @@ function Card({book}) {
                               <p className="amount">&#8377; {amount}</p>
                         </div>
                   </div>
+                   <Modal/>
                   </>
                 ) 
             }

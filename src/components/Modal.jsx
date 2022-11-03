@@ -10,7 +10,7 @@ function Modal() {
                 {/* <img src="./images/book" alt="" /> */}
                 <div className="info">
                     <h1>React js by example- building modern web applications</h1>
-                    <h3>Luis carrillo</h3><br/>
+                    <h3>Luis carrillo</h3>
                     <h4>pakt publiching ltd<span>2016-02-23</span></h4><br/>
                     <a href="#"><button>more</button></a>
                 </div>
