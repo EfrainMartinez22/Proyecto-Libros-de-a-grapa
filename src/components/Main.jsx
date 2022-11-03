@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Card from './Card';
-
+import axios from 'axios'
 function Main() {
+    const [search, setSearch]=useState("");
   return (
     <header>
     <div className="header">
@@ -18,6 +19,10 @@ function Main() {
         </div>
     </div>
        < div className="container">
+                 <Card/>
+                 <Card/>
+                 <Card/>
+                 <Card/>
                  <Card/>
          </div>
     </header>
