@@ -3,7 +3,7 @@ import Card from './Card';
 import axios from 'axios'
 function Main() {
     const [search, setSearch]=useState("");
-    const [bookData,setData]=useState();
+    const [bookData,setData]=useState([]);
     const searchBook=(evt)=>{
         if(evt.key==="Enter"){
             // axios.get('url de api y apikey')
