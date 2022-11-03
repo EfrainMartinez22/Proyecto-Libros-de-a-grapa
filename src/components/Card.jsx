@@ -6,17 +6,21 @@ function Card({book}) {
     {
         book.map((item)=>{
             let thumbnail=item.valumeInfo.imageLinks && item.valumeInfo.imageLinks.smallThumbnail;
-            return(
-                <>
-              <div className='card'>
-                          <img src={thumbnail} alt="" />
-                    <div className="bottom">
-                         <h3 className='title'>React js</h3>
-                          <p className="amount">&#8377; 3290</p>
-                    </div>
-              </div>
-              </>
-            ) 
+            let amount=item.saleInfo.listPrice && item.saleInfo.listPrice.amount;
+            if(thumbnail!=undefined && amount!=undefined){
+                return(
+                    <>
+                  <div className='card'>
+                              <img src={thumbnail} alt="" />
+                        <div className="bottom">
+                             <h3 className='title'>{item.valumeInfo.title}</h3>
+                              <p className="amount">&#8377; {amount}</p>
+                        </div>
+                  </div>
+                  </>
+                ) 
+            }
+    
         })
     }
 
