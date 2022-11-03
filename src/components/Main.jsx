@@ -3,10 +3,11 @@ import Card from './Card';
 import axios from 'axios'
 function Main() {
     const [search, setSearch]=useState("");
+    const [bookData,setData]=useState();
     const searchBook=(evt)=>{
         if(evt.key==="Enter"){
             // axios.get('url de api y apikey')
-            .then(res=>console.log(res.data.items))
+            .then(res=>setData(res.data.items))
             .then(err=>console.log(err))
 
         }
@@ -27,11 +28,10 @@ function Main() {
         </div>
     </div>
        < div className="container">
-                 <Card/>
-                 <Card/>
-                 <Card/>
-                 <Card/>
-                 <Card/>
+            {
+                                 <Card book={bookData}/>
+            }
+
          </div>
     </header>
 
